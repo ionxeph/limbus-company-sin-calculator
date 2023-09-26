@@ -29,6 +29,7 @@ jobs:
 
     - name: Build
       run: |
+        wasm-pack test --node
         wasm-pack build
         npm install
         npm run build
