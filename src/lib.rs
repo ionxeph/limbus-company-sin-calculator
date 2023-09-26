@@ -33,14 +33,8 @@ impl Team {
 
     pub fn sum_supported_sins(&self) -> String {
         let mut summed = Sins::default();
-        // TODO: refactor to reduce
-        for (i, _) in self
-            .sinners
-            .iter()
-            .filter(|sinner| sinner.in_team)
-            .enumerate()
-        {
-            summed = summed.sum_sins(self.sinners[i].get_supported_sins());
+        for sinner in self.sinners.iter().filter(|sinner| sinner.in_team) {
+            summed = summed.sum_sins(sinner.get_supported_sins());
         }
         serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
     }
