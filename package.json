@@ -4,7 +4,9 @@
   "description": "web app with Rust wasm",
   "scripts": {
     "build": "webpack --config webpack.prod.config.js",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "build:wasm": "wasm-pack build",
+    "test": "wasm-pack test --node"
   },
   "author": "",
   "license": "ISC",

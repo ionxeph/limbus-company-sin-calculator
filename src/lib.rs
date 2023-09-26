@@ -1,9 +1,15 @@
-mod utils;
 extern crate serde;
 extern crate wasm_bindgen;
 
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
+
+extern crate web_sys;
+macro_rules! log {
+    ( $( $t:tt )* ) => {
+        web_sys::console::log_1(&format!( $( $t )* ).into());
+    }
+}
 
 #[wasm_bindgen]
 #[derive(Debug, Default, Serialize, Deserialize)]
@@ -26,7 +32,17 @@ impl Team {
     }
 
     pub fn sum_supported_sins(&self) -> String {
-        String::new()
+        let mut summed = Sins::default();
+        // TODO: refactor to reduce
+        for (i, _) in self
+            .sinners
+            .iter()
+            .filter(|sinner| sinner.in_team)
+            .enumerate()
+        {
+            summed = summed.sum_sins(self.sinners[i].get_supported_sins());
+        }
+        serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
     }
 }
 
@@ -39,6 +55,12 @@ pub struct Sinner {
     pub selected_identity: Identity,
     pub selected_egos: Vec<Ego>,
     pub in_team: bool,
+}
+
+impl Sinner {
+    fn get_supported_sins(&self) -> &Sins {
+        &self.selected_identity.supported_sins
+    }
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
@@ -56,6 +78,40 @@ pub struct Sins {
     pub gloom: u8,
     pub pride: u8,
     pub envy: u8,
+}
+
+impl Sins {
+    fn to_arr(&self) -> [u8; 7] {
+        // always in alphabetic order
+        [
+            self.envy,
+            self.gloom,
+            self.gluttony,
+            self.lust,
+            self.pride,
+            self.sloth,
+            self.wrath,
+        ]
+    }
+
+    fn sum_sins(&self, other: &Sins) -> Sins {
+        let self_sins = self.to_arr();
+        let other_sins = other.to_arr();
+        let summed = self_sins
+            .iter()
+            .enumerate()
+            .map(|(i, &x)| x + other_sins[i])
+            .collect::<Vec<u8>>();
+        Sins {
+            envy: summed[0],
+            gloom: summed[1],
+            gluttony: summed[2],
+            lust: summed[3],
+            pride: summed[4],
+            sloth: summed[5],
+            wrath: summed[6],
+        }
+    }
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]

@@ -10,3 +10,4 @@ await fetch('starter-data.json')
   });
 
   console.log(JSON.parse(team.as_json_string()));
+  console.log(JSON.parse(team.sum_supported_sins()));

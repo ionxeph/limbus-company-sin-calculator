@@ -17,7 +17,7 @@
         }
       },
       "selected_egos": [],
-      "in_team": false
+      "in_team": true
     },
     {
       "name": "Faust",
@@ -36,7 +36,7 @@
         }
       },
       "selected_egos": [],
-      "in_team": false
+      "in_team": true
     },
     {
       "name": "Don Quixote",
@@ -55,7 +55,7 @@
         }
       },
       "selected_egos": [],
-      "in_team": false
+      "in_team": true
     },
     {
       "name": "Ryōshū",
@@ -64,17 +64,17 @@
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
-          "envy": 2,
+          "envy": 0,
           "gloom": 0,
           "gluttony": 3,
-          "lust": 0,
+          "lust": 2,
           "pride": 1,
           "sloth": 0,
           "wrath": 0
         }
       },
       "selected_egos": [],
-      "in_team": false
+      "in_team": true
     },
     {
       "name": "Meursault",
@@ -93,7 +93,7 @@
         }
       },
       "selected_egos": [],
-      "in_team": false
+      "in_team": true
     }
   ]
 }

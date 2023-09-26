@@ -34,7 +34,7 @@ fn should_sum_up_sins_supported() {
               }
             },
             "selected_egos": [],
-            "in_team": false
+            "in_team": true
           },
           {
             "name": "Faust",
@@ -53,7 +53,7 @@ fn should_sum_up_sins_supported() {
               }
             },
             "selected_egos": [],
-            "in_team": false
+            "in_team": true
           },
           {
             "name": "Don Quixote",
@@ -72,7 +72,7 @@ fn should_sum_up_sins_supported() {
               }
             },
             "selected_egos": [],
-            "in_team": false
+            "in_team": true
           },
           {
             "name": "Ryōshū",
@@ -81,17 +81,17 @@ fn should_sum_up_sins_supported() {
             "selected_identity": {
               "name": "LCB Sinner",
               "supported_sins": {
-                "envy": 2,
+                "envy": 0,
                 "gloom": 0,
                 "gluttony": 3,
-                "lust": 0,
+                "lust": 2,
                 "pride": 1,
                 "sloth": 0,
                 "wrath": 0
               }
             },
             "selected_egos": [],
-            "in_team": false
+            "in_team": true
           },
           {
             "name": "Meursault",
@@ -110,7 +110,7 @@ fn should_sum_up_sins_supported() {
               }
             },
             "selected_egos": [],
-            "in_team": false
+            "in_team": true
           }
         ]
       }
@@ -118,16 +118,7 @@ fn should_sum_up_sins_supported() {
     "#;
     let team = Team::load(data.to_owned());
     let actual = &team.sum_supported_sins();
-    let expected = r#"
-        {
-            "envy": 4,
-            "lust": 5,
-            "gloom": 4,
-            "pride": 6,
-            "gluttony": 5,
-            "sloth": 6,
-            "wrath": 0
-        }
-    "#;
+    let expected =
+        "{\"wrath\":0,\"lust\":5,\"sloth\":6,\"gluttony\":5,\"gloom\":4,\"pride\":6,\"envy\":4}";
     assert_eq!(actual, expected);
 }
