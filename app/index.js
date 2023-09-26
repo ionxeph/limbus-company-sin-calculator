@@ -1,3 +1,4 @@
+import './styles.css';
 import { Team } from 'limbus-company-team-builder';
 
 let team;
