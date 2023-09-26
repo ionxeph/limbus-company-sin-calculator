@@ -2,9 +2,9 @@ name: Build wasm and then run Webpack
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   pull_request:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   build:
@@ -15,21 +15,30 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Build wasm
-      uses: jetli/wasm-pack-action@v0.4.0
-      with:
-        version: "latest"
+      - name: Build wasm
+        uses: jetli/wasm-pack-action@v0.4.0
+        with:
+          version: 'latest'
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+               node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
-        wasm-pack test --node
-        wasm-pack build
-        npm install
-        npm run build
+      - name: Test
+        run: |  
+          wasm-pack test --node
+
+      - name: Build wasm
+        run: |
+          wasm-pack build
+
+      - name: NPM install
+        run: |
+          npm install
+
+      - name: NPM build
+        run: |
+          npm run build
