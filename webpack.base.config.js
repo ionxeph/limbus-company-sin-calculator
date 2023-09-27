@@ -1,5 +1,4 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -9,9 +8,6 @@ module.exports = {
     filename: './bootstrap.js',
   },
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [{ from: 'starter-data.json', to: 'dist' }],
-    }),
     new MiniCssExtractPlugin(),
   ],
   module: {

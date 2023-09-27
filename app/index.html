@@ -5,7 +5,62 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
 
-  <body>
-    <div class="m-4">templated</div>
+  <body class="bg-slate-400 dark:bg-black">
+    <main class="text-red-700 dark:text-yellow-300">
+      <div
+        class="m-5 grid lg:grid-cols-6 lg:grid-rows-2 md:grid-cols-4 md:grid-rows:3 sm:grid-cols-2 sm:grid-rows-6"
+        id="sinner-container"
+      >
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+        <div class="text-center sinner-element"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-7 sm:mx-1 md:mx-11 lg:mx-96">
+        <div id="supported-sins-container" class="grid grid-cols-2 gap-2">
+          <p class="col-span-2">Supported Sins</p>
+          <p class="mt-2 text-red-600 dark:text-red-300">Wrath</p>
+          <span class="wrath-sin-counter"></span>
+          <p class="mt-2 text-orange-600 dark:text-orange-300">Lust</p>
+          <span class="lust-sin-counter"></span>
+          <p class="mt-2 text-yellow-600 dark:text-yellow-300">Sloth</p>
+          <span class="sloth-sin-counter"></span>
+          <p class="mt-2 text-green-600 dark:text-green-300">Gluttony</p>
+          <span class="gluttony-sin-counter"></span>
+          <p class="mt-2 text-teal-600 dark:text-teal-300">Gloom</p>
+          <span class="gloom-sin-counter"></span>
+          <p class="mt-2 text-blue-600 dark:text-blue-300">Pride</p>
+          <span class="pride-sin-counter"></span>
+          <p class="mt-2 text-purple-600 dark:text-purple-300">Envy</p>
+          <span class="envy-sin-counter"></span>
+        </div>
+
+        <div id="required-sins-container" class="grid grid-cols-2 gap-2">
+          <p class="col-span-2">Required Sins</p>
+          <p class="mt-2 text-red-600 dark:text-red-300">Wrath</p>
+          <span class="wrath-sin-counter"></span>
+          <p class="mt-2 text-orange-600 dark:text-orange-300">Lust</p>
+          <span class="lust-sin-counter"></span>
+          <p class="mt-2 text-yellow-600 dark:text-yellow-300">Sloth</p>
+          <span class="sloth-sin-counter"></span>
+          <p class="mt-2 text-green-600 dark:text-green-300">Gluttony</p>
+          <span class="gluttony-sin-counter"></span>
+          <p class="mt-2 text-teal-600 dark:text-teal-300">Gloom</p>
+          <span class="gloom-sin-counter"></span>
+          <p class="mt-2 text-blue-600 dark:text-blue-300">Pride</p>
+          <span class="pride-sin-counter"></span>
+          <p class="mt-2 text-purple-600 dark:text-purple-300">Envy</p>
+          <span class="envy-sin-counter"></span>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
