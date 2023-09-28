@@ -181,7 +181,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Land of Illusion",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 5,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -200,7 +214,21 @@
           "wrath": 2
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Bodysack",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -219,7 +247,21 @@
           "wrath": 3
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Snagharpoon",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -238,7 +280,21 @@
           "wrath": 1
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "What is Cast",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -257,7 +313,21 @@
           "wrath": 2
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Branch of Knowledge",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -276,7 +346,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "To Páthos Máthos",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 2,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     },
     {
@@ -295,7 +379,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Suddenly, One Day",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": false
     }
   ]

@@ -6,7 +6,6 @@ import * as starterData from './starter-data.json';
 let team = Team.load(JSON.stringify(starterData));
 
 let teamData = JSON.parse(team.as_json_string());
-console.log(teamData);
 
 function generateInTeamCheckbox(inTeam, sinnerName) {
   const checkbox = document.createElement('input');
@@ -14,8 +13,7 @@ function generateInTeamCheckbox(inTeam, sinnerName) {
   checkbox.checked = inTeam;
   checkbox.setAttribute('aria-label', `select ${sinnerName}`)
   checkbox.addEventListener('change', () => {
-    console.log(checkbox.checked);
-    team.toggleSinnerSelection(sinnerName);
+    team.toggle_sinner_selection(sinnerName);
     updateSins();
   });
   return checkbox;

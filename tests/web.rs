@@ -3,7 +3,7 @@
 #![cfg(target_arch = "wasm32")]
 
 extern crate wasm_bindgen_test;
-use std::{assert, assert_eq};
+use std::assert_eq;
 
 use wasm_bindgen_test::*;
 
@@ -205,4 +205,12 @@ fn should_sum_up_sins_required() {
     let expected =
         "{\"wrath\":3,\"lust\":4,\"sloth\":4,\"gluttony\":2,\"gloom\":1,\"pride\":6,\"envy\":2}";
     assert_eq!(actual, expected);
+}
+
+#[wasm_bindgen_test]
+fn should_toggle_sinner_selection() {
+    let mut team = set_up_test_team();
+    team.toggle_sinner_selection(String::from("Yi Sang"));
+    let expected = "{\"name\":\"Yi Sang\",\"all_identies\":[],\"all_egos\":[],\"selected_identity\":{\"name\":\"LCB Sinner\",\"supported_sins\":{\"wrath\":0,\"lust\":0,\"sloth\":1,\"gluttony\":0,\"gloom\":3,\"pride\":0,\"envy\":2}},\"selected_egos\":[{\"name\":\"Crow’s Eye View\",\"sin_cost\":{\"wrath\":1,\"lust\":0,\"sloth\":3,\"gluttony\":0,\"gloom\":0,\"pride\":0,\"envy\":0},\"level\":\"Zayin\"}],\"in_team\":false}";
+    assert_eq!(team.get_sinner(String::from("Yi Sang")), expected);
 }

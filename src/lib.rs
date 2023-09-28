@@ -1,15 +1,17 @@
 extern crate serde;
 extern crate wasm_bindgen;
 
+use std::str::FromStr;
+
 use serde::{Deserialize, Serialize};
 use wasm_bindgen::prelude::*;
 
-extern crate web_sys;
-macro_rules! log {
-    ( $( $t:tt )* ) => {
-        web_sys::console::log_1(&format!( $( $t )* ).into());
-    }
-}
+// extern crate web_sys;
+// macro_rules! log {
+//     ( $( $t:tt )* ) => {
+//         web_sys::console::log_1(&format!( $( $t )* ).into());
+//     }
+// }
 
 #[wasm_bindgen]
 #[derive(Debug, Default, Serialize, Deserialize)]
@@ -45,6 +47,35 @@ impl Team {
             summed = summed.sum_sins(&sinner.get_required_sins());
         }
         serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
+    }
+
+    pub fn get_sinner(&self, name: String) -> String {
+        let sinner_name = match SinnerName::from_str(&name) {
+            Ok(name) => name,
+            Err(_) => return String::from("{}"),
+        };
+        match self
+            .sinners
+            .iter()
+            .find(|sinner| sinner.name == sinner_name)
+        {
+            Some(sinner) => serde_json::to_string(sinner).unwrap_or_else(|_| String::from("{}")),
+            _ => String::from("{}"),
+        }
+    }
+
+    pub fn toggle_sinner_selection(&mut self, name: String) {
+        let sinner_name = match SinnerName::from_str(&name) {
+            Ok(name) => name,
+            Err(_) => return,
+        };
+
+        for sinner in &mut self.sinners {
+            if sinner.name == sinner_name {
+                sinner.in_team = !sinner.in_team;
+                break;
+            }
+        }
     }
 }
 
@@ -141,7 +172,7 @@ pub enum EgoLevel {
     Aleph,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, PartialEq, Eq)]
 pub enum SinnerName {
     #[default]
     #[serde(rename = "Yi Sang")]
@@ -159,4 +190,26 @@ pub enum SinnerName {
     Sinclair,
     Outis,
     Gregor,
+}
+
+impl std::str::FromStr for SinnerName {
+    type Err = ();
+
+    fn from_str(s: &str) -> Result<SinnerName, ()> {
+        match s {
+            "Yi Sang" => Ok(SinnerName::YiSang),
+            "Faust" => Ok(SinnerName::Faust),
+            "Don Quixote" => Ok(SinnerName::DonQuixote),
+            "Ryōshū" => Ok(SinnerName::Ryōshū),
+            "Meursault" => Ok(SinnerName::Meursault),
+            "Hong Lu" => Ok(SinnerName::HongLu),
+            "Heathcliff" => Ok(SinnerName::Heathcliff),
+            "Ishmael" => Ok(SinnerName::Ishmael),
+            "Rodion" => Ok(SinnerName::Rodion),
+            "Sinclair" => Ok(SinnerName::Sinclair),
+            "Outis" => Ok(SinnerName::Outis),
+            "Gregor" => Ok(SinnerName::Gregor),
+            _ => Err(()),
+        }
+    }
 }
