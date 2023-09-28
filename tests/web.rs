@@ -10,8 +10,6 @@ use wasm_bindgen_test::*;
 extern crate limbus_company_team_builder;
 use limbus_company_team_builder::*;
 
-// wasm_bindgen_test_configure!(run_in_browser);
-
 #[cfg(test)]
 fn set_up_test_team() -> Team {
     let data = r#"
@@ -81,7 +79,73 @@ fn set_up_test_team() -> Team {
               }
             }
           ],
-          "all_egos": [],
+          "all_egos": [
+            {
+              "name": "Crow’s Eye View",
+              "sin_cost": {
+                "envy": 0,
+                "gloom": 0,
+                "gluttony": 0,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 3,
+                "wrath": 1
+              },
+              "level": "Zayin"
+            },
+            {
+              "name": "4th Match Flame",
+              "sin_cost": {
+                "envy": 0,
+                "gloom": 0,
+                "gluttony": 1,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 1,
+                "wrath": 5
+              },
+              "level": "Teth"
+            },
+            {
+              "name": "Wishing Cairn",
+              "sin_cost": {
+                "envy": 0,
+                "gloom": 1,
+                "gluttony": 0,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 4,
+                "wrath": 0
+              },
+              "level": "Teth"
+            },
+            {
+              "name": "Dimension Shredder",
+              "sin_cost": {
+                "envy": 0,
+                "gloom": 0,
+                "gluttony": 3,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 3,
+                "wrath": 0
+              },
+              "level": "He"
+            },
+            {
+              "name": "Sunshower",
+              "sin_cost": {
+                "envy": 0,
+                "gloom": 2,
+                "gluttony": 2,
+                "lust": 0,
+                "pride": 2,
+                "sloth": 4,
+                "wrath": 0
+              },
+              "level": "He"
+            }
+          ],
           "selected_identity": {
             "name": "LCB Sinner",
             "supported_sins": {
@@ -287,5 +351,30 @@ fn should_change_selected_id() {
     assert!(team
         .as_json_string()
         .find("\"selected_identity\":{\"name\":\"Seven Association South Section 6\"")
+        .is_some());
+}
+
+#[wasm_bindgen_test]
+fn should_change_selected_egos() {
+    let mut team = set_up_test_team();
+    // if selecting an EGO already selected, remove it
+    team.toggle_ego(String::from("Yi Sang"), String::from("Crow’s Eye View"));
+    assert!(team
+        .as_json_string()
+        .find(r#""selected_egos":[{"name": "Crow’s Eye View""#)
+        .is_none());
+
+    // if selecting an EGO whose level isn't filled, add it to selected_egos
+    team.toggle_ego(String::from("Yi Sang"), String::from("4th Match Flame"));
+    assert!(team
+        .as_json_string()
+        .find(r#""selected_egos":[{"name": "4th Match Flame""#)
+        .is_some());
+
+    // if selecting an EGO whose level is filled, swap it in selected_egos
+    team.toggle_ego(String::from("Yi Sang"), String::from("Wishing Cairn"));
+    assert!(team
+        .as_json_string()
+        .find(r#""selected_egos":[{"name": "Wishing Cairn""#)
         .is_some());
 }

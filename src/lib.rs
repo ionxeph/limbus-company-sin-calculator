@@ -62,6 +62,10 @@ impl Team {
             }
         }
     }
+
+    pub fn toggle_ego(&mut self, sinner_name: String, ego_name: String) {
+        // TODO
+    }
 }
 
 impl Team {
@@ -80,7 +84,7 @@ pub struct Sinner {
     // TODO: add support for available_identities and available_egos
     pub name: SinnerName,
     pub all_identities: Vec<Identity>, // all ids in the game
-    pub all_egos: Vec<Identity>,
+    pub all_egos: Vec<Ego>,
     pub selected_identity: Identity,
     pub selected_egos: Vec<Ego>,
     pub in_team: bool,

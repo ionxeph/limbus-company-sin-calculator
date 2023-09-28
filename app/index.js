@@ -3,9 +3,9 @@ import { Team } from 'limbus-company-team-builder';
 import * as rawData from './data.json';
 
 // TODO: work on light mode styling
-const initialData = JSON.parse(JSON.stringify(rawData));
 let team = Team.load(JSON.stringify(rawData));
 const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
+const initialData = JSON.parse(team.as_json_string());
 
 function generateIdSelector(sinnerName, identities, selected) {
   const button = document.createElement('button');
