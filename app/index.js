@@ -12,7 +12,8 @@ function generateInTeamCheckbox(inTeam, sinnerName) {
   checkbox.type = 'checkbox';
   checkbox.checked = inTeam;
   checkbox.setAttribute('aria-label', `select ${sinnerName}`);
-  checkbox.className = 'appearance-none peer w-8 h-8 bg-gray-300 border-gray-300 rounded focus:ring-red-500 focus:ring-2 checked:border-0dark:bg-gray-700 dark:border-gray-600 checked:bg-slate-300 dark:checked:bg-slate-500 dark:focus:ring-red-600 dark:ring-offset-gray-800';
+  checkbox.className =
+    'appearance-none peer w-8 h-8 bg-gray-300 border-gray-300 rounded focus:ring-red-500 focus:ring-2 checked:border-0dark:bg-gray-700 dark:border-gray-600 checked:bg-slate-300 dark:checked:bg-slate-500 dark:focus:ring-red-600 dark:ring-offset-gray-800';
   checkbox.addEventListener('change', () => {
     team.toggle_sinner_selection(sinnerName);
     updateSins();
@@ -20,9 +21,7 @@ function generateInTeamCheckbox(inTeam, sinnerName) {
   return checkbox;
 }
 
-const sinnerContainers = document
-  .getElementById('sinner-container')
-  .querySelectorAll('div.sinner-element');
+const sinnerContainers = document.getElementById('sinner-container').querySelectorAll('div.sinner-element');
 teamData.sinners.forEach((sinner, i) => {
   const nameContainer = sinnerContainers[i].querySelector('p.name');
   const selectedIdContainer = sinnerContainers[i].querySelector('p.selected-id');
