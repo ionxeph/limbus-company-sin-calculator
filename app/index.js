@@ -5,7 +5,9 @@ import * as starterData from './starter-data.json';
 // TODO: work on light mode styling
 let team = Team.load(JSON.stringify(starterData));
 
-let teamData = JSON.parse(team.as_json_string());
+// team.change_selected_id("Yi Sang", "Seven Association South Section 6");
+
+let initialData = JSON.parse(team.as_json_string());
 
 function generateInTeamCheckbox(inTeam, sinnerName) {
   const checkbox = document.createElement('input');
@@ -22,7 +24,7 @@ function generateInTeamCheckbox(inTeam, sinnerName) {
 }
 
 const sinnerContainers = document.getElementById('sinner-container').querySelectorAll('div.sinner-element');
-teamData.sinners.forEach((sinner, i) => {
+initialData.sinners.forEach((sinner, i) => {
   const nameContainer = sinnerContainers[i].querySelector('p.name');
   const selectedIdContainer = sinnerContainers[i].querySelector('p.selected-id');
   const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');

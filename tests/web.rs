@@ -276,3 +276,16 @@ fn should_toggle_sinner_selection() {
     team.toggle_sinner_selection(String::from("Yi Sang"));
     assert!(team.as_json_string().find("\"in_team\":false").is_none());
 }
+
+#[wasm_bindgen_test]
+fn should_change_selected_id() {
+    let mut team = set_up_test_team();
+    team.change_selected_id(
+        String::from("Yi Sang"),
+        String::from("Seven Association South Section 6"),
+    );
+    assert!(team
+        .as_json_string()
+        .find("\"selected_identity\":{\"name\":\"Seven Association South Section 6\"")
+        .is_some());
+}

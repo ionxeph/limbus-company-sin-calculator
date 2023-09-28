@@ -50,17 +50,29 @@ impl Team {
     }
 
     pub fn toggle_sinner_selection(&mut self, name: String) {
+        if let Some(sinner) = self.get_mut_sinner(name) {
+            sinner.in_team = !sinner.in_team
+        }
+    }
+
+    pub fn change_selected_id(&mut self, sinner_name: String, new_id_name: String) {
+        if let Some(sinner) = self.get_mut_sinner(sinner_name) {
+            if let Some(id) = sinner.all_identities.iter().find(|i| i.name == new_id_name) {
+                sinner.selected_identity = id.clone();
+            }
+            // sinner.selected_identity = sinner.all_identities.iter().find(|i| i.name == new_id_name)
+        }
+    }
+}
+
+impl Team {
+    fn get_mut_sinner(&mut self, name: String) -> Option<&mut Sinner> {
         let sinner_name = match SinnerName::from_str(&name) {
             Ok(name) => name,
-            Err(_) => return,
+            Err(_) => return None,
         };
 
-        for sinner in &mut self.sinners {
-            if sinner.name == sinner_name {
-                sinner.in_team = !sinner.in_team;
-                break;
-            }
-        }
+        self.sinners.iter_mut().find(|s| s.name == sinner_name)
     }
 }
 
@@ -89,13 +101,13 @@ impl Sinner {
     }
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 pub struct Identity {
     pub name: String,
     pub supported_sins: Sins,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 pub struct Sins {
     pub wrath: u8,
     pub lust: u8,
