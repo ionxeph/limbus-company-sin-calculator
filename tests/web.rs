@@ -19,7 +19,68 @@ fn set_up_test_team() -> Team {
       "sinners": [
         {
           "name": "Yi Sang",
-          "all_identies": [],
+          "all_identities": [
+            {
+              "name": "LCB Sinner",
+              "supported_sins": {
+                "envy": 2,
+                "gloom": 3,
+                "gluttony": 0,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 1,
+                "wrath": 0
+              }
+            },
+            {
+              "name": "Seven Association South Section 6",
+              "supported_sins": {
+                "envy": 0,
+                "gloom": 3,
+                "gluttony": 2,
+                "lust": 0,
+                "pride": 0,
+                "sloth": 1,
+                "wrath": 0
+              }
+            },
+            {
+              "name": "Blade Lineage Salsu",
+              "supported_sins": {
+                "envy": 1,
+                "gloom": 0,
+                "gluttony": 0,
+                "lust": 0,
+                "pride": 3,
+                "sloth": 0,
+                "wrath": 2
+              }
+            },
+            {
+              "name": "Effloresced E.G.O::Spicebush",
+              "supported_sins": {
+                "envy": 0,
+                "gloom": 0,
+                "gluttony": 3,
+                "lust": 0,
+                "pride": 1,
+                "sloth": 2,
+                "wrath": 0
+              }
+            },
+            {
+              "name": "Molar Office Fixer",
+              "supported_sins": {
+                "envy": 0,
+                "gloom": 0,
+                "gluttony": 0,
+                "lust": 3,
+                "pride": 0,
+                "sloth": 2,
+                "wrath": 1
+              }
+            }
+          ],
           "all_egos": [],
           "selected_identity": {
             "name": "LCB Sinner",
@@ -52,7 +113,7 @@ fn set_up_test_team() -> Team {
         },
         {
           "name": "Faust",
-          "all_identies": [],
+          "all_identities": [],
           "all_egos": [],
           "selected_identity": {
             "name": "LCB Sinner",
@@ -85,7 +146,7 @@ fn set_up_test_team() -> Team {
         },
         {
           "name": "Don Quixote",
-          "all_identies": [],
+          "all_identities": [],
           "all_egos": [],
           "selected_identity": {
             "name": "LCB Sinner",
@@ -118,7 +179,7 @@ fn set_up_test_team() -> Team {
         },
         {
           "name": "Ryōshū",
-          "all_identies": [],
+          "all_identities": [],
           "all_egos": [],
           "selected_identity": {
             "name": "LCB Sinner",
@@ -151,7 +212,7 @@ fn set_up_test_team() -> Team {
         },
         {
           "name": "Meursault",
-          "all_identies": [],
+          "all_identities": [],
           "all_egos": [],
           "selected_identity": {
             "name": "LCB Sinner",
@@ -211,6 +272,7 @@ fn should_sum_up_sins_required() {
 fn should_toggle_sinner_selection() {
     let mut team = set_up_test_team();
     team.toggle_sinner_selection(String::from("Yi Sang"));
-    let expected = "{\"name\":\"Yi Sang\",\"all_identies\":[],\"all_egos\":[],\"selected_identity\":{\"name\":\"LCB Sinner\",\"supported_sins\":{\"wrath\":0,\"lust\":0,\"sloth\":1,\"gluttony\":0,\"gloom\":3,\"pride\":0,\"envy\":2}},\"selected_egos\":[{\"name\":\"Crow’s Eye View\",\"sin_cost\":{\"wrath\":1,\"lust\":0,\"sloth\":3,\"gluttony\":0,\"gloom\":0,\"pride\":0,\"envy\":0},\"level\":\"Zayin\"}],\"in_team\":false}";
-    assert_eq!(team.get_sinner(String::from("Yi Sang")), expected);
+    assert!(team.as_json_string().find("\"in_team\":false").is_some());
+    team.toggle_sinner_selection(String::from("Yi Sang"));
+    assert!(team.as_json_string().find("\"in_team\":false").is_none());
 }

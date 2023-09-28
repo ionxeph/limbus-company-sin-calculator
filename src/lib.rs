@@ -49,21 +49,6 @@ impl Team {
         serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
     }
 
-    pub fn get_sinner(&self, name: String) -> String {
-        let sinner_name = match SinnerName::from_str(&name) {
-            Ok(name) => name,
-            Err(_) => return String::from("{}"),
-        };
-        match self
-            .sinners
-            .iter()
-            .find(|sinner| sinner.name == sinner_name)
-        {
-            Some(sinner) => serde_json::to_string(sinner).unwrap_or_else(|_| String::from("{}")),
-            _ => String::from("{}"),
-        }
-    }
-
     pub fn toggle_sinner_selection(&mut self, name: String) {
         let sinner_name = match SinnerName::from_str(&name) {
             Ok(name) => name,
@@ -83,7 +68,7 @@ impl Team {
 pub struct Sinner {
     // TODO: add support for available_identities and available_egos
     pub name: SinnerName,
-    pub all_identies: Vec<Identity>, // all ids in the game
+    pub all_identities: Vec<Identity>, // all ids in the game
     pub all_egos: Vec<Identity>,
     pub selected_identity: Identity,
     pub selected_egos: Vec<Ego>,

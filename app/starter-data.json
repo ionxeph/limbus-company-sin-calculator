@@ -2,7 +2,68 @@
   "sinners": [
     {
       "name": "Yi Sang",
-      "all_identies": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Seven Association South Section 6",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Blade Lineage Salsu",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Effloresced E.G.O::Spicebush",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 2,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Molar Office Fixer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 1
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -35,7 +96,7 @@
     },
     {
       "name": "Faust",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -68,7 +129,7 @@
     },
     {
       "name": "Don Quixote",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -101,7 +162,7 @@
     },
     {
       "name": "Ryōshū",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -134,7 +195,7 @@
     },
     {
       "name": "Meursault",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -167,7 +228,7 @@
     },
     {
       "name": "Hong Lu",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -200,7 +261,7 @@
     },
     {
       "name": "Heathcliff",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -233,7 +294,7 @@
     },
     {
       "name": "Ishmael",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -266,7 +327,7 @@
     },
     {
       "name": "Rodion",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -299,7 +360,7 @@
     },
     {
       "name": "Sinclair",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -332,7 +393,7 @@
     },
     {
       "name": "Outis",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -365,7 +426,7 @@
     },
     {
       "name": "Gregor",
-      "all_identies": [],
+      "all_identities": [],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
