@@ -13,15 +13,12 @@ const sinnerElements = document
 teamData.sinners.forEach((sinner, i) => {
   sinnerElements[
     i
-  ].innerHTML = `${sinner.name}: ${sinner.selected_identity.name}`;
+  ].innerHTML = `${sinner.name}</br>${sinner.selected_identity.name}`;
 });
 
-const supportedSinContainer = document.getElementById(
-  'supported-sins-container'
-);
+const sinsContainer = document.getElementById('sins-container');
 let supportedSins = JSON.parse(team.sum_supported_sins());
-console.log(supportedSins);
-
+let requiredSins = JSON.parse(team.sum_required_sins());
 for (let sin in supportedSins) {
-  supportedSinContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = supportedSins[sin];
+  sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${requiredSins[sin]}/${supportedSins[sin]}`;
 }

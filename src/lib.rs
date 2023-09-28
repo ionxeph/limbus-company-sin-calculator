@@ -38,6 +38,14 @@ impl Team {
         }
         serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
     }
+
+    pub fn sum_required_sins(&self) -> String {
+        let mut summed = Sins::default();
+        for sinner in self.sinners.iter().filter(|sinner| sinner.in_team) {
+            summed = summed.sum_sins(&sinner.get_required_sins());
+        }
+        serde_json::to_string(&summed).unwrap_or_else(|_| String::from("{}"))
+    }
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
@@ -54,6 +62,14 @@ pub struct Sinner {
 impl Sinner {
     fn get_supported_sins(&self) -> &Sins {
         &self.selected_identity.supported_sins
+    }
+
+    fn get_required_sins(&self) -> Sins {
+        let mut summed = Sins::default();
+        for ego in self.selected_egos.iter() {
+            summed = summed.sum_sins(&ego.sin_cost);
+        }
+        summed
     }
 }
 
@@ -110,12 +126,12 @@ impl Sins {
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct Ego {
+    pub name: String,
     pub sin_cost: Sins,
     pub level: EgoLevel,
 }
 
 #[derive(Debug, Default, Serialize, Deserialize)]
-#[serde(untagged)]
 pub enum EgoLevel {
     #[default]
     Zayin,

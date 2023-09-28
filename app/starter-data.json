@@ -16,7 +16,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Crow’s Eye View",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 1
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": true
     },
     {
@@ -35,7 +49,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Representation Emitter",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 4,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": true
     },
     {
@@ -54,7 +82,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "La Sangre de Sancho",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": true
     },
     {
@@ -73,7 +115,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Forest for the Flames",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": true
     },
     {
@@ -92,7 +148,21 @@
           "wrath": 0
         }
       },
-      "selected_egos": [],
+      "selected_egos": [
+        {
+          "name": "Chains of Others",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "in_team": true
     },
     {
