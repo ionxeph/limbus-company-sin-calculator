@@ -96,7 +96,80 @@
     },
     {
       "name": "Faust",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 2,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "W Corp. L2 Cleanup Agent",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "Lobotomy Corp. Remnant",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "The One Who Grips",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Zwei Association South Section 4",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Seven Association South Section 4",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -129,7 +202,68 @@
     },
     {
       "name": "Don Quixote",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "W Corp. L3 Cleanup Agent",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Shi Association South Section 5 Director",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "N Corp. Mittelhammer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "Cinq Association South Section 5 Director",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -162,7 +296,68 @@
     },
     {
       "name": "Ryōshū",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 2,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Seven Association South Section 6",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 3,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Kurokumo Clan Wakashu",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 1,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "R.B. Chef de Cuisine",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "W Corp. L3 Cleanup Agent",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -195,7 +390,20 @@
     },
     {
       "name": "Meursault",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 3,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -228,7 +436,20 @@
     },
     {
       "name": "Hong Lu",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 3,
+            "sloth": 2,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -261,7 +482,20 @@
     },
     {
       "name": "Heathcliff",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -294,7 +528,20 @@
     },
     {
       "name": "Ishmael",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -327,7 +574,20 @@
     },
     {
       "name": "Rodion",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 1
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -360,7 +620,20 @@
     },
     {
       "name": "Sinclair",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 2
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -393,7 +666,20 @@
     },
     {
       "name": "Outis",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 3,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
@@ -426,7 +712,20 @@
     },
     {
       "name": "Gregor",
-      "all_identities": [],
+      "all_identities": [
+        {
+          "name": "LCB Sinner",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          }
+        }
+      ],
       "all_egos": [],
       "selected_identity": {
         "name": "LCB Sinner",
