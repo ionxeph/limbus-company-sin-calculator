@@ -60,7 +60,6 @@ impl Team {
             if let Some(id) = sinner.all_identities.iter().find(|i| i.name == new_id_name) {
                 sinner.selected_identity = id.clone();
             }
-            // sinner.selected_identity = sinner.all_identities.iter().find(|i| i.name == new_id_name)
         }
     }
 }

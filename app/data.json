@@ -64,7 +64,73 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Crow’s Eye View",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 1
+          },
+          "level": "Zayin"
+        },
+        {
+          "name": "4th Match Flame",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 5
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Wishing Cairn",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 4,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Dimension Shredder",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          },
+          "level": "He"
+        },
+        {
+          "name": "Sunshower",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 4,
+            "wrath": 0
+          },
+          "level": "He"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -170,7 +236,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Representation Emitter",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 4,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "Seven Association South Section 4",
         "supported_sins": {
@@ -264,7 +344,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "La Sangre de Sancho",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -358,7 +452,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Forest for the Flames",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -404,7 +512,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Chains of Others",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -450,7 +572,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Land of Illusion",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 5,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -496,7 +632,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Bodysack",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -542,7 +692,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Snagharpoon",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -588,7 +752,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "What is Cast",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -634,7 +812,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Branch of Knowledge",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -680,7 +872,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "To Páthos Máthos",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 2,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {
@@ -726,7 +932,21 @@
           }
         }
       ],
-      "all_egos": [],
+      "all_egos": [
+        {
+          "name": "Suddenly, One Day",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        }
+      ],
       "selected_identity": {
         "name": "LCB Sinner",
         "supported_sins": {

@@ -5,6 +5,7 @@ import * as rawData from './data.json';
 // TODO: work on light mode styling
 const initialData = JSON.parse(JSON.stringify(rawData));
 let team = Team.load(JSON.stringify(rawData));
+const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
 
 function generateIdSelector(sinnerName, identities, selected) {
   const button = document.createElement('button');
@@ -69,6 +70,11 @@ function initialRender() {
     idContainer.appendChild(button);
     idContainer.appendChild(dialog);
 
+    
+    // egos
+    const egoContainer = sinnerContainers[i].querySelector('span.ego');
+    egoContainer.innerHTML = `${sinner.selected_egos[0].name}: ${sinner.all_egos.length}`;
+
     // is sinner selected
     const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');
     isInTeamCheckboxContainer.prepend(generateInTeamCheckbox(sinner.in_team, sinner.name));
@@ -84,5 +90,6 @@ function updateSins() {
     sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${requiredSins[sin]}/${supportedSins[sin]}`;
   }
 }
+
 initialRender();
 updateSins();
