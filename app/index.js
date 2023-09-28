@@ -6,11 +6,16 @@ import * as rawData from './data.json';
 const initialData = JSON.parse(JSON.stringify(rawData));
 let team = Team.load(JSON.stringify(rawData));
 
-// team.change_selected_id("Yi Sang", "Seven Association South Section 6");
-
 function generateIdSelector(sinnerName, identities, selected) {
+  const button = document.createElement('button');
   const selector = document.createElement('select');
-  identities.forEach(id => {
+  const idDialog = document.createElement('dialog');
+  button.className = 'w-full h-full bg-orange-500 truncate block max-w-full p-1';
+  button.innerText = selected.name;
+  button.addEventListener('click', () => {
+    idDialog.showModal();
+  });
+  identities.forEach((id) => {
     const option = document.createElement('option');
     option.innerHTML = id.name;
     option.selected = id.name === selected.name;
@@ -18,9 +23,12 @@ function generateIdSelector(sinnerName, identities, selected) {
   });
   selector.addEventListener('change', () => {
     team.change_selected_id(sinnerName, selector.value);
+    button.innerText = selector.value;
+    idDialog.close();
     updateSins();
   });
-  return selector;
+  idDialog.appendChild(selector);
+  return [button, idDialog];
 }
 
 function generateInTeamCheckbox(inTeam, sinnerName) {
@@ -40,12 +48,19 @@ function generateInTeamCheckbox(inTeam, sinnerName) {
 function initialRender() {
   const sinnerContainers = document.getElementById('sinner-container').querySelectorAll('div.sinner-element');
   initialData.sinners.forEach((sinner, i) => {
+    // sinner name
     const nameContainer = sinnerContainers[i].querySelector('p.name');
-    const idContainer = sinnerContainers[i].querySelector('p.identity');
-    const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');
     nameContainer.innerHTML = sinner.name;
+
+    // sinner id
+    const idContainer = sinnerContainers[i].querySelector('span.identity');
+    let [button, dialog] = generateIdSelector(sinner.name, sinner.all_identities, sinner.selected_identity);
+    idContainer.appendChild(button);
+    idContainer.appendChild(dialog);
+
+    // is sinner selected
+    const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');
     isInTeamCheckboxContainer.prepend(generateInTeamCheckbox(sinner.in_team, sinner.name));
-    idContainer.appendChild(generateIdSelector(sinner.name, sinner.all_identities, sinner.selected_identity));
   });
   document.body.removeAttribute('style');
 }

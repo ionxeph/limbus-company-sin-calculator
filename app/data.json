@@ -172,14 +172,14 @@
       ],
       "all_egos": [],
       "selected_identity": {
-        "name": "LCB Sinner",
+        "name": "Seven Association South Section 4",
         "supported_sins": {
-          "envy": 0,
-          "gloom": 0,
+          "envy": 3,
+          "gloom": 2,
           "gluttony": 1,
           "lust": 0,
-          "pride": 3,
-          "sloth": 2,
+          "pride": 0,
+          "sloth": 0,
           "wrath": 0
         }
       },
