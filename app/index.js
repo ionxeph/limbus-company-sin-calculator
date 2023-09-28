@@ -27,6 +27,17 @@ function generateIdSelector(sinnerName, identities, selected) {
     idDialog.close();
     updateSins();
   });
+  idDialog.addEventListener('click', (event) => {
+    const rect = idDialog.getBoundingClientRect();
+    const isInDialog =
+      rect.top <= event.clientY &&
+      event.clientY <= rect.top + rect.height &&
+      rect.left <= event.clientX &&
+      event.clientX <= rect.left + rect.width;
+    if (!isInDialog) {
+      idDialog.close();
+    }
+  });
   idDialog.appendChild(selector);
   return [button, idDialog];
 }
