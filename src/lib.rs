@@ -90,7 +90,6 @@ impl Team {
 
 #[derive(Debug, Default, Serialize, Deserialize)]
 pub struct Sinner {
-    // TODO: add support for available_identities and available_egos
     pub name: SinnerName,
     pub all_identities: Vec<Identity>, // all ids in the game
     pub all_egos: Vec<Ego>,

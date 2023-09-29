@@ -9,39 +9,47 @@ const initialData = JSON.parse(team.as_json_string());
 
 function createDialogWithBackdrop() {
   const dialog = document.createElement('dialog');
+  dialog.classList.add('dialog');
+
+  const dialogContent = document.createElement('div');
+  dialogContent.classList.add('dialog__content');
+  dialog.appendChild(dialogContent);
+
   dialog.addEventListener('click', (event) => {
     if (event.target === dialog) {
       dialog.close();
     }
   });
-  return dialog;
+  return [dialog, dialogContent];
 }
 
 function generateIdSelector(sinner) {
   const [sinnerName, identities, selected] = [sinner.name, sinner.all_identities, sinner.selected_identity];
-  const selector = document.createElement('select');
-  const dialog = createDialogWithBackdrop();
+  const [dialog, dialogContent] = createDialogWithBackdrop();
+  dialogContent.classList.add('dialog__content--identity');
   identities.forEach((id) => {
-    const option = document.createElement('option');
-    option.innerHTML = id.name;
-    option.selected = id.name === selected.name;
-    selector.appendChild(option);
+    const button = document.createElement('button');
+    button.innerHTML = id.name;
+
+    button.classList.add('identity-card');
+    button.classList.toggle('identity-card--selected', id.name === selected.name);
+
+    button.addEventListener('click', (e) => {
+      team.change_selected_id(sinnerName, e.target.innerHTML);
+      dialog.close();
+      updateCalculatedElements();
+    });
+    dialogContent.appendChild(button);
   });
-  selector.addEventListener('change', () => {
-    team.change_selected_id(sinnerName, selector.value);
-    dialog.close();
-    updateCalculatedElements();
-  });
-  dialog.appendChild(selector);
   return dialog;
 }
 
 function generateEgoSelector(sinner) {
   const [sinnerName, selectedEgos, allEgos] = [sinner.name, sinner.selected_egos, sinner.all_egos];
-  const dialog = createDialogWithBackdrop();
-  const dialogContent = document.createElement('div');
-  dialogContent.className = 'grid grid-cols-1';
-  dialog.appendChild(dialogContent);
+  const [dialog, dialogContent] = createDialogWithBackdrop();
+  // TODO: more proper styling later
+  dialogContent.classList.add('grid');
+  dialogContent.classList.add('grid-cols-1');
   egoLevels.forEach((level) => {
     const selector = document.createElement('select');
     selector.className = 'mb-2';
@@ -134,7 +142,23 @@ function updateCalculatedElements() {
     const sinnerContainer = document.getElementById('sinner-container').querySelectorAll('div.sinner-element')[i];
 
     // selected id
-    sinnerContainer.querySelector('button.identity-button').innerHTML = sinner.selected_identity.name;
+    const selectedIdName = sinner.selected_identity.name;
+    sinnerContainer.querySelector('button.identity-button').innerHTML = selectedIdName;
+    sinnerContainer
+      .querySelector('.dialog__content--identity')
+      .querySelectorAll('button')
+      .forEach((button) => {
+        const selectedIdNoLongerSelected =
+          button.classList.contains('identity-card--selected') && button.innerHTML !== selectedIdName;
+        const currentSelectedNotShownAsSelected =
+          !button.classList.contains('identity-card--selected') && button.innerHTML === selectedIdName;
+        if (selectedIdNoLongerSelected) {
+          button.classList.remove('identity-card--selected');
+        }
+        if (currentSelectedNotShownAsSelected) {
+          button.classList.add('identity-card--selected');
+        }
+      });
 
     // selected egos
     const egoContainers = sinnerContainer.querySelectorAll('span.ego button span.ego-name');
