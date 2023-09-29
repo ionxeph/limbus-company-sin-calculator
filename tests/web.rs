@@ -3,7 +3,7 @@
 #![cfg(target_arch = "wasm32")]
 
 extern crate wasm_bindgen_test;
-use std::assert_eq;
+use std::{assert_eq, dbg};
 
 use wasm_bindgen_test::*;
 
@@ -357,6 +357,11 @@ fn should_change_selected_id() {
 #[wasm_bindgen_test]
 fn should_change_selected_egos() {
     let mut team = set_up_test_team();
+
+    // if selecting an EGO which isn't in all_egos, don't add it to selected_egos
+    team.toggle_ego(String::from("Yi Sang"), String::from("Not an EGO"));
+    assert!(team.as_json_string().find("Not an EGO").is_none());
+
     // if selecting an EGO already selected, remove it
     team.toggle_ego(String::from("Yi Sang"), String::from("Crow’s Eye View"));
     assert!(team
@@ -366,15 +371,16 @@ fn should_change_selected_egos() {
 
     // if selecting an EGO whose level isn't filled, add it to selected_egos
     team.toggle_ego(String::from("Yi Sang"), String::from("4th Match Flame"));
+
     assert!(team
         .as_json_string()
-        .find(r#""selected_egos":[{"name": "4th Match Flame""#)
+        .find("\"selected_egos\":[{\"name\":\"4th Match Flame\"")
         .is_some());
 
     // if selecting an EGO whose level is filled, swap it in selected_egos
     team.toggle_ego(String::from("Yi Sang"), String::from("Wishing Cairn"));
     assert!(team
         .as_json_string()
-        .find(r#""selected_egos":[{"name": "Wishing Cairn""#)
+        .find("\"selected_egos\":[{\"name\":\"Wishing Cairn\"")
         .is_some());
 }

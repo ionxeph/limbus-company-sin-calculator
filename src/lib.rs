@@ -64,7 +64,16 @@ impl Team {
     }
 
     pub fn toggle_ego(&mut self, sinner_name: String, ego_name: String) {
-        // TODO
+        let sinner = match self.get_mut_sinner(sinner_name) {
+            Some(s) => s,
+            None => return,
+        };
+
+        if let Some(existing_idx) = sinner.selected_egos.iter().position(|e| e.name == ego_name) {
+            sinner.remove_selected_ego(existing_idx);
+        } else if let Some(ego) = sinner.all_egos.iter().find(|e| e.name == ego_name) {
+            sinner.add_to_selected_ego(ego.clone());
+        }
     }
 }
 
@@ -101,6 +110,21 @@ impl Sinner {
             summed = summed.sum_sins(&ego.sin_cost);
         }
         summed
+    }
+
+    fn remove_selected_ego(&mut self, idx: usize) {
+        self.selected_egos.remove(idx);
+    }
+
+    fn add_to_selected_ego(&mut self, ego: Ego) {
+        // before adding, remove EGO of the same level if any
+        if let Some(ego_of_same_level_idx) =
+            self.selected_egos.iter().position(|e| e.level == ego.level)
+        {
+            self.selected_egos.remove(ego_of_same_level_idx);
+        }
+
+        self.selected_egos.push(ego);
     }
 }
 
@@ -155,14 +179,14 @@ impl Sins {
     }
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone)]
 pub struct Ego {
     pub name: String,
     pub sin_cost: Sins,
     pub level: EgoLevel,
 }
 
-#[derive(Debug, Default, Serialize, Deserialize)]
+#[derive(Debug, Default, Serialize, Deserialize, Clone, PartialEq, Eq)]
 pub enum EgoLevel {
     #[default]
     Zayin,
@@ -171,6 +195,21 @@ pub enum EgoLevel {
     Waw,
     Aleph,
 }
+
+// impl std::str::FromStr for EgoLevel {
+//     type Err = ();
+
+//     fn from_str(s: &str) -> Result<EgoLevel, ()> {
+//         match s {
+//             "Zayin" => Ok(EgoLevel::Zayin),
+//             "Teth" => Ok(EgoLevel::Teth),
+//             "He" => Ok(EgoLevel::He),
+//             "Waw" => Ok(EgoLevel::Waw),
+//             "Aleph" => Ok(EgoLevel::Aleph),
+//             _ => Err(()),
+//         }
+//     }
+// }
 
 #[derive(Debug, Default, Serialize, Deserialize, PartialEq, Eq)]
 pub enum SinnerName {
