@@ -16,16 +16,11 @@ function createDialogWithBackdrop() {
   });
   return dialog;
 }
+
 function generateIdSelector(sinner) {
   const [sinnerName, identities, selected] = [sinner.name, sinner.all_identities, sinner.selected_identity];
-  const button = document.createElement('button');
   const selector = document.createElement('select');
   const dialog = createDialogWithBackdrop();
-  button.className = 'w-full h-full bg-orange-500 truncate block max-w-full p-1';
-  button.innerText = selected.name;
-  button.addEventListener('click', () => {
-    dialog.showModal();
-  });
   identities.forEach((id) => {
     const option = document.createElement('option');
     option.innerHTML = id.name;
@@ -34,12 +29,11 @@ function generateIdSelector(sinner) {
   });
   selector.addEventListener('change', () => {
     team.change_selected_id(sinnerName, selector.value);
-    button.innerText = selector.value;
     dialog.close();
     updateCalculatedElements();
   });
   dialog.appendChild(selector);
-  return [button, dialog];
+  return dialog;
 }
 
 function generateEgoSelector(sinner) {
@@ -106,17 +100,19 @@ function initialRender() {
 
     // sinner id
     const idContainer = sinnerContainers[i].querySelector('span.identity');
-    let [idButton, idDialog] = generateIdSelector(sinner);
-    idContainer.appendChild(idButton);
+    let idDialog = generateIdSelector(sinner);
     idContainer.appendChild(idDialog);
+    idContainer.querySelector('button').addEventListener('click', () => {
+      idDialog.showModal();
+    });
 
     // egos
     const egoContainer = sinnerContainers[i].querySelector('span.ego');
     let egoDialog = generateEgoSelector(sinner);
+    egoContainer.appendChild(egoDialog);
     egoContainer.querySelector('button').addEventListener('click', () => {
       egoDialog.showModal();
     });
-    egoContainer.appendChild(egoDialog);
 
     // is sinner selected
     const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');
@@ -133,11 +129,15 @@ function updateCalculatedElements() {
   for (let sin in supportedSins) {
     sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${supportedSins[sin]}/${requiredSins[sin]}`;
   }
+
   updatedData.sinners.forEach((sinner, i) => {
-    const egoContainers = document
-      .getElementById('sinner-container')
-      .querySelectorAll('div.sinner-element')
-      [i].querySelectorAll('span.ego button span.ego-name');
+    const sinnerContainer = document.getElementById('sinner-container').querySelectorAll('div.sinner-element')[i];
+
+    // selected id
+    sinnerContainer.querySelector('button.identity-button').innerHTML = sinner.selected_identity.name;
+
+    // selected egos
+    const egoContainers = sinnerContainer.querySelectorAll('span.ego button span.ego-name');
     egoLevels.forEach((level, i) => {
       const selectedEgo = sinner.selected_egos.filter((e) => e.level === level);
       egoContainers[i].innerHTML = selectedEgo.length > 0 ? selectedEgo[0].name : '';
