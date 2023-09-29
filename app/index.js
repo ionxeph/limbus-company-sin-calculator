@@ -146,7 +146,7 @@ function updateCalculatedElements() {
   const requiredSins = JSON.parse(team.sum_required_sins());
   const updatedData = JSON.parse(team.as_json_string());
   for (let sin in supportedSins) {
-    sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${requiredSins[sin]}/${supportedSins[sin]}`;
+    sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${supportedSins[sin]}/${requiredSins[sin]}`;
   }
   updatedData.sinners.forEach((sinner, i) => {
     const egoContainers = document
