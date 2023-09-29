@@ -1,5 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './bootstrap.js',
@@ -9,6 +10,9 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
+    new CopyPlugin({
+      patterns: [{ from: 'app/assets', to: 'assets' }],
+    }),
   ],
   module: {
     rules: [

@@ -5,7 +5,7 @@
     <title>Limbus Company Sin Calculator</title>
   </head>
 
-  <body class="bg-slate-100 dark:bg-black" style="display: none">
+  <body class="font-sans bg-slate-100 dark:bg-black" style="display: none">
     <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
       <symbol viewBox="0 -0.5 17 17" id="checked">
         <path
@@ -16,123 +16,399 @@
     <main class="text-red-700 dark:text-yellow-300">
       <div class="grid grid-cols-12 gap-3 m-5">
         <div
-          class="col-span-8 md:col-span-10 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-1 auto-rows-min"
+          class="col-span-8 md:col-span-10 grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-2 auto-rows-min"
           id="sinner-container"
         >
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />
               </svg>
             </span>
           </div>
-          <div class="text-center sinner-element grid grid-cols-1 border border-primary auto-rows-min">
+          <div class="sinner-element">
             <p class="name"></p>
             <span class="identity"></span>
-            <span class="ego"></span>
+            <span class="ego">
+              <button class="ego-button">
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ZAYIN_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/TETH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/HE_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/WAW_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+                <span class="col-span-1 max-w-full text-left">
+                  <img class="ego-icon" src="<%= htmlWebpackPlugin.options.publicPath %>/assets/ALEPH_icon.png" />
+                </span>
+                <span class="ego-name"></span>
+              </button>
+            </span>
             <span class="in-team-checkbox-container text-right relative">
               <svg class="absolute w-8 h-8 right-0 top-1 fill-slate-900 hidden peer-checked:block pointer-events-none">
                 <use xlink:href="#checked" />

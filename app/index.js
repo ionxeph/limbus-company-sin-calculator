@@ -44,27 +44,11 @@ function generateIdSelector(sinner) {
 
 function generateEgoSelector(sinner) {
   const [sinnerName, selectedEgos, allEgos] = [sinner.name, sinner.selected_egos, sinner.all_egos];
-  const button = document.createElement('button');
-  button.className = 'w-full h-full truncate block max-w-full p-1 grid grid-cols-4 grid-rows-5 gap-1';
   const dialog = createDialogWithBackdrop();
   const dialogContent = document.createElement('div');
   dialogContent.className = 'grid grid-cols-1';
   dialog.appendChild(dialogContent);
-  button.addEventListener('click', () => {
-    dialog.showModal();
-  });
   egoLevels.forEach((level) => {
-    const levelIndicator = document.createElement('span');
-    levelIndicator.className = 'w-full h-full truncate block max-w-full col-span-1 text-left';
-    levelIndicator.innerHTML = level;
-
-    const currentSelected = document.createElement('span');
-    currentSelected.className = 'w-full h-full truncate block max-w-full col-span-3 text-left';
-    const selectedEgo = selectedEgos.filter((e) => e.level === level);
-    currentSelected.innerHTML = selectedEgo.length > 0 ? selectedEgo[0].name : '';
-    button.appendChild(levelIndicator);
-    button.appendChild(currentSelected);
-
     const selector = document.createElement('select');
     selector.className = 'mb-2';
     const allEgosAtThisLevel = allEgos.filter((e) => e.level === level);
@@ -96,7 +80,7 @@ function generateEgoSelector(sinner) {
     });
     dialogContent.appendChild(selector);
   });
-  return [button, dialog];
+  return dialog;
 }
 
 function generateInTeamCheckbox(sinner) {
@@ -105,8 +89,7 @@ function generateInTeamCheckbox(sinner) {
   checkbox.type = 'checkbox';
   checkbox.checked = inTeam;
   checkbox.setAttribute('aria-label', `select ${sinnerName}`);
-  checkbox.className =
-    'appearance-none peer w-8 h-8 bg-gray-300 border-gray-300 rounded focus:ring-red-500 focus:ring-2 checked:border-0 dark:bg-gray-700 dark:border-gray-600 checked:bg-slate-300 dark:checked:bg-slate-500 dark:focus:ring-red-600 dark:ring-offset-gray-800';
+  checkbox.className = 'in-team-checkbox peer';
   checkbox.addEventListener('change', () => {
     team.toggle_sinner_selection(sinnerName);
     updateCalculatedElements();
@@ -129,13 +112,15 @@ function initialRender() {
 
     // egos
     const egoContainer = sinnerContainers[i].querySelector('span.ego');
-    let [egoButton, egoDialog] = generateEgoSelector(sinner);
-    egoContainer.appendChild(egoButton);
+    let egoDialog = generateEgoSelector(sinner);
+    egoContainer.querySelector('button').addEventListener('click', () => {
+      egoDialog.showModal();
+    });
     egoContainer.appendChild(egoDialog);
 
     // is sinner selected
     const isInTeamCheckboxContainer = sinnerContainers[i].querySelector('span.in-team-checkbox-container');
-    isInTeamCheckboxContainer.appendChild(generateInTeamCheckbox(sinner));
+    isInTeamCheckboxContainer.prepend(generateInTeamCheckbox(sinner));
   });
   document.body.removeAttribute('style');
 }
@@ -152,10 +137,11 @@ function updateCalculatedElements() {
     const egoContainers = document
       .getElementById('sinner-container')
       .querySelectorAll('div.sinner-element')
-      [i].querySelectorAll('span.ego button span.col-span-3');
+      [i].querySelectorAll('span.ego button span.ego-name');
     egoLevels.forEach((level, i) => {
       const selectedEgo = sinner.selected_egos.filter((e) => e.level === level);
       egoContainers[i].innerHTML = selectedEgo.length > 0 ? selectedEgo[0].name : '';
+      egoContainers[i].title = selectedEgo.length > 0 ? selectedEgo[0].name : '';
     });
   });
 }

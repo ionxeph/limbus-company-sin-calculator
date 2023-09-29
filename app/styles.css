@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .sinner-element {
+    @apply text-center grid grid-cols-1 auto-rows-min border-4 border-yellow-600 rounded-md;
+  }
+
+  .name {
+    @apply text-xl;
+  }
+
+  .in-team-checkbox {
+    @apply appearance-none w-8 h-8 bg-gray-300 border-gray-300 rounded focus:ring-red-500 focus:ring-2 checked:border-0 dark:bg-gray-700 dark:border-gray-600 checked:bg-slate-300 dark:checked:bg-slate-500 dark:focus:ring-red-600 dark:ring-offset-gray-800;
+  }
+
+  .ego-name {
+    @apply col-span-5 w-full h-full truncate block max-w-full text-left align-middle;
+  }
+
+  .ego-button {
+    @apply w-full h-full truncate max-w-full p-1 grid grid-cols-6 grid-rows-5 gap-x-1 gap-y-3;
+  }
+
+  .ego-icon {
+    @apply w-6 h-8;
+  }
+}

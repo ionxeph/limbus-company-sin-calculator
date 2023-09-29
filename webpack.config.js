@@ -4,8 +4,11 @@ const { merge } = require('webpack-merge');
 
 module.exports = merge(base, {
   mode: 'development',
-  plugins: [new HtmlWebpackPlugin({
-    template: './app/index.html',
-    scriptLoading: 'defer'
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      publicPath: '',
+      template: './app/index.html',
+      scriptLoading: 'defer',
+    }),
+  ],
 });
