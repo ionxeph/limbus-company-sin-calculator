@@ -1433,6 +1433,78 @@
             "sloth": 0,
             "wrath": 2
           }
+        },
+        {
+          "name": "Blade Lineage Salsu",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Zwei Association South Section 6",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Los Mariachis Jefe",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "The One Who Shall Grip",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "Lobotomy E.G.O::Red Sheet",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 1,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Molar Boatworks Fixer",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 3,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
@@ -1448,6 +1520,45 @@
             "wrath": 1
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Impending Day",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Lifetime Stew",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Lantern",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 4,
+            "lust": 1,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "He"
         }
       ],
       "selected_identity": {
@@ -1493,6 +1604,54 @@
             "sloth": 3,
             "wrath": 0
           }
+        },
+        {
+          "name": "Blade Lineage Cutthroat",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "G Corp. Head Manager",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Seven Association South Section 6 Director",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Molar Office Fixer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 3
+          }
         }
       ],
       "all_egos": [
@@ -1508,6 +1667,45 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Ebony Stem",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 3,
+            "lust": 2,
+            "pride": 4,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "He"
+        },
+        {
+          "name": "Ya Śūnyatā Tad Rūpam",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 2,
+            "sloth": 2,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Sunshower",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 0
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {
@@ -1553,6 +1751,66 @@
             "sloth": 1,
             "wrath": 0
           }
+        },
+        {
+          "name": "Liu Association South Section 6",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "G Corp. Manager Corporal",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "R.B. Sous-chef",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Rosespanner Workshop Fixer",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 1,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Zwei Association South Section 4",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
@@ -1568,6 +1826,45 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Legerdemain",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          },
+          "level": "Zayin"
+        },
+        {
+          "name": "Lantern",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 4,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "AEDD",
+          "sin_cost": {
+            "envy": 3,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "He"
         }
       ],
       "selected_identity": {

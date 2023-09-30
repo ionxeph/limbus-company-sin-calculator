@@ -2,15 +2,22 @@ import './styles.css';
 import { Team } from 'limbus-company-team-builder';
 import * as rawData from './data.json';
 
-// let storedData = localStorage.getItem(
-//   'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26'
-// );
+let storedData = localStorage.getItem(
+  'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26'
+);
 let team;
-// if (storedData) {
-//   team = Team.load(storedData);
-// } else {
-team = Team.load(JSON.stringify(rawData));
-// }
+if (storedData) {
+  let newData = JSON.parse(JSON.stringify(rawData));
+  storedData = JSON.parse(storedData);
+  newData.sinners.forEach((sinner, i) => {
+    sinner.selected_identity = storedData.sinners[i].selected_identity;
+    sinner.selected_egos = storedData.sinners[i].selected_egos;
+    sinner.in_team = storedData.sinners[i].in_team;
+  });
+  team = Team.load(JSON.stringify(newData));
+} else {
+  team = Team.load(JSON.stringify(rawData));
+}
 const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
 const initialData = JSON.parse(team.as_json_string());
 
