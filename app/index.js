@@ -2,7 +2,6 @@ import './styles.css';
 import { Team } from 'limbus-company-team-builder';
 import * as rawData from './data.json';
 
-// TODO: work on light mode styling
 let team = Team.load(JSON.stringify(rawData));
 const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
 const initialData = JSON.parse(team.as_json_string());
@@ -13,7 +12,7 @@ function createDialogWithBackdrop() {
 
   const button = document.createElement('button');
   button.innerHTML = 'Close';
-  button.className = 'text-white p-2 border-2 border-white rounded mr-2 mt-2';
+  button.className = 'border-black dark:text-white p-2 border-2 dark:border-white rounded mr-2 mt-2';
   button.addEventListener('click', () => {
     dialog.close();
   });
@@ -77,7 +76,7 @@ function generateEgoSelector(sinner) {
         break;
     }
     const levelTitle = document.createElement('p');
-    levelTitle.className = 'text-white m-2';
+    levelTitle.className = 'dark:text-white m-2';
     levelTitle.innerText = level.toUpperCase();
     const allEgosAtThisLevel = allEgos.filter((e) => e.level === level);
     if (allEgosAtThisLevel.length > 0) {
