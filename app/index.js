@@ -9,7 +9,15 @@ const initialData = JSON.parse(team.as_json_string());
 
 function createDialogWithBackdrop() {
   const dialog = document.createElement('dialog');
-  dialog.classList.add('dialog');
+  dialog.classList.add('dialog', 'text-right');
+
+  const button = document.createElement('button');
+  button.innerHTML = 'Close';
+  button.className = 'text-white p-2 border-2 border-white rounded mr-2 mt-2';
+  button.addEventListener('click', () => {
+    dialog.close();
+  });
+  dialog.appendChild(button);
 
   const dialogContent = document.createElement('div');
   dialogContent.classList.add('dialog__content');
@@ -31,8 +39,8 @@ function generateIdSelector(sinner) {
     const button = document.createElement('button');
     button.innerHTML = id.name;
 
-    button.classList.add('identity-card');
-    button.classList.toggle('identity-card--selected', id.name === selected.name);
+    button.classList.add('card', 'card--identity');
+    button.classList.toggle('card--selected', id.name === selected.name);
 
     button.addEventListener('click', (e) => {
       team.change_selected_id(sinnerName, e.target.innerHTML);
@@ -47,40 +55,47 @@ function generateIdSelector(sinner) {
 function generateEgoSelector(sinner) {
   const [sinnerName, selectedEgos, allEgos] = [sinner.name, sinner.selected_egos, sinner.all_egos];
   const [dialog, dialogContent] = createDialogWithBackdrop();
-  // TODO: more proper styling later
-  dialogContent.classList.add('grid');
-  dialogContent.classList.add('grid-cols-1');
+  dialogContent.classList.add('grid', 'grid-cols-1');
   egoLevels.forEach((level) => {
-    const selector = document.createElement('select');
-    selector.className = 'mb-2';
-    const allEgosAtThisLevel = allEgos.filter((e) => e.level === level);
-    if (level !== 'Zayin') {
-      const option = document.createElement('option');
-      option.innerHTML = 'None';
-      if (allEgosAtThisLevel.length === 0) {
-        option.selected = true;
-      }
-      selector.appendChild(option);
+    const levelContainer = document.createElement('div');
+    levelContainer.className = 'ego-level-container';
+    switch (level) {
+      case 'Zayin':
+        levelContainer.classList.add('border-purple-500');
+        break;
+      case 'Teth':
+        levelContainer.classList.add('border-purple-600');
+        break;
+      case 'He':
+        levelContainer.classList.add('border-purple-700');
+        break;
+      case 'Waw':
+        levelContainer.classList.add('border-purple-800');
+        break;
+      case 'Aleph':
+        levelContainer.classList.add('border-purple-900');
+        break;
     }
-    allEgosAtThisLevel.forEach((ego) => {
-      const option = document.createElement('option');
-      option.innerHTML = ego.name;
-      option.selected = selectedEgos.filter((e) => e.name === ego.name).length > 0;
-      if (option.selected) {
-        selector.setAttribute('data-current', ego.name);
-      }
-      selector.appendChild(option);
-    });
-    selector.addEventListener('change', () => {
-      if (selector.value === 'None') {
-        team.toggle_ego(sinnerName, selector.dataset.current);
-      } else {
-        team.toggle_ego(sinnerName, selector.value);
-      }
-      selector.setAttribute('data-current', selector.value);
-      updateCalculatedElements();
-    });
-    dialogContent.appendChild(selector);
+    const levelTitle = document.createElement('p');
+    levelTitle.className = 'text-white m-2';
+    levelTitle.innerText = level.toUpperCase();
+    const allEgosAtThisLevel = allEgos.filter((e) => e.level === level);
+    if (allEgosAtThisLevel.length > 0) {
+      levelContainer.appendChild(levelTitle);
+      allEgosAtThisLevel.forEach((ego) => {
+        const button = document.createElement('button');
+        button.classList.add('card', 'card--ego');
+        button.classList.toggle('card--selected', selectedEgos.filter((e) => e.name === ego.name).length > 0);
+        button.innerHTML = ego.name;
+        button.addEventListener('click', () => {
+          button.classList.toggle('card--selected');
+          team.toggle_ego(sinnerName, ego.name);
+          updateCalculatedElements();
+        });
+        levelContainer.appendChild(button);
+      });
+      dialogContent.appendChild(levelContainer);
+    }
   });
   return dialog;
 }
@@ -149,14 +164,14 @@ function updateCalculatedElements() {
       .querySelectorAll('button')
       .forEach((button) => {
         const selectedIdNoLongerSelected =
-          button.classList.contains('identity-card--selected') && button.innerHTML !== selectedIdName;
+          button.classList.contains('card--selected') && button.innerHTML !== selectedIdName;
         const currentSelectedNotShownAsSelected =
-          !button.classList.contains('identity-card--selected') && button.innerHTML === selectedIdName;
+          !button.classList.contains('card--selected') && button.innerHTML === selectedIdName;
         if (selectedIdNoLongerSelected) {
-          button.classList.remove('identity-card--selected');
+          button.classList.remove('card--selected');
         }
         if (currentSelectedNotShownAsSelected) {
-          button.classList.add('identity-card--selected');
+          button.classList.add('card--selected');
         }
       });
 
@@ -166,6 +181,17 @@ function updateCalculatedElements() {
       const selectedEgo = sinner.selected_egos.filter((e) => e.level === level);
       egoContainers[i].innerHTML = selectedEgo.length > 0 ? selectedEgo[0].name : '';
       egoContainers[i].title = selectedEgo.length > 0 ? selectedEgo[0].name : '';
+    });
+    sinnerContainer.querySelectorAll('.ego-level-container button.card').forEach((button) => {
+      const isEgoSelected = sinner.selected_egos.filter((e) => e.name === button.innerHTML).length > 0;
+      const selectedEgoNoLongerSelected = button.classList.contains('card--selected') && !isEgoSelected;
+      const currentSelectedNotShownAsSelected = !button.classList.contains('card--selected') && isEgoSelected;
+      if (selectedEgoNoLongerSelected) {
+        button.classList.remove('card--selected');
+      }
+      if (currentSelectedNotShownAsSelected) {
+        button.classList.add('card--selected');
+      }
     });
   });
 }

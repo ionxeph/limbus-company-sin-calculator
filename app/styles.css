@@ -36,19 +36,19 @@
   }
 
   .dialog {
-    @apply border-4 border-yellow-600 rounded-md backdrop:bg-gray-900 backdrop:bg-opacity-80;
+    @apply border-4 border-yellow-600 rounded-md bg-slate-100 dark:bg-black backdrop:bg-gray-900 backdrop:bg-opacity-80;
   }
 
   .dialog__content {
-    @apply p-2 bg-slate-100 dark:bg-black;
+    @apply p-2 bg-transparent grid w-auto sm:w-80;
   }
 
-  .dialog__content--identity {
-    @apply grid w-auto sm:w-80;
+  .ego-level-container {
+    @apply border-2 rounded-md my-2 text-left;
   }
 
-  .identity-card {
-    @apply border-4 rounded-md my-4 p-5 w-full
+  .card {
+    @apply border-4 rounded-md
     /* dark */
   dark:border-yellow-600 dark:text-white dark:bg-neutral-600
     /* dark hover */
@@ -57,7 +57,15 @@
   dark:active:bg-neutral-600;
   }
 
-  .identity-card--selected {
+  .card--identity {
+    @apply p-5 w-full my-4;
+  }
+
+  .card--ego {
+    @apply py-2 px-1 m-2;
+  }
+
+  .card--selected {
     /* dark */
     @apply dark:bg-red-900
     /* dark hover */
