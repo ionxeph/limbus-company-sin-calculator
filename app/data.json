@@ -958,6 +958,66 @@
             "sloth": 0,
             "wrath": 2
           }
+        },
+        {
+          "name": "Shi Association South Section 5",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "R Corp. 4th Pack Rabbit",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "N Corp. Kleinhammer",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Lobotomy E.G.O::Sunshower",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Seven Association South Section 4",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          }
         }
       ],
       "all_egos": [
@@ -973,6 +1033,32 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Telepole",
+          "sin_cost": {
+            "envy": 3,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 3
+          },
+          "level": "He"
+        },
+        {
+          "name": "AEDD",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {
