@@ -640,6 +640,66 @@
             "sloth": 3,
             "wrath": 0
           }
+        },
+        {
+          "name": "Liu Association South Section 6",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "W Corp. L2 Cleanup Agent",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "N Corp. Großhammer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 3,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Rosespanner Workshop Fixer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 1,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "R Corp. 4th Pack Rhino",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
@@ -655,6 +715,45 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Screwloose Wallop",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 2,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Pursuance",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 4,
+            "wrath": 0
+          },
+          "level": "He"
+        },
+        {
+          "name": "Capote",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 2
+          },
+          "level": "He"
         }
       ],
       "selected_identity": {
