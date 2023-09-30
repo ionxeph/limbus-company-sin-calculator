@@ -249,17 +249,56 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Fluid Sac",
+          "sin_cost": {
+            "envy": 3,
+            "gloom": 4,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "He"
+        },
+        {
+          "name": "Hex Nail",
+          "sin_cost": {
+            "envy": 6,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Telepole",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          },
+          "level": "He"
         }
       ],
       "selected_identity": {
-        "name": "Seven Association South Section 4",
+        "name": "LCB Sinner",
         "supported_sins": {
-          "envy": 3,
-          "gloom": 2,
+          "envy": 0,
+          "gloom": 0,
           "gluttony": 1,
           "lust": 0,
-          "pride": 0,
-          "sloth": 0,
+          "pride": 3,
+          "sloth": 2,
           "wrath": 0
         }
       },
