@@ -73,4 +73,8 @@
     /* dark active */
     dark:active:bg-red-900;
   }
+
+  .sin-counter {
+    @apply text-right;
+  }
 }
