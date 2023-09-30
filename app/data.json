@@ -1104,6 +1104,78 @@
             "sloth": 0,
             "wrath": 3
           }
+        },
+        {
+          "name": "R Corp. 4th Pack Reindeer",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "Shi Association South Section 5",
+          "supported_sins": {
+            "envy": 3,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "LCCB Assistant Manager",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Lobotomy E.G.O::Sloshing",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 1,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Liu Association South Section 4",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 3,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          }
+        },
+        {
+          "name": "Molar Boatworks Fixer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 2,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
@@ -1119,6 +1191,45 @@
             "wrath": 2
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Roseate Desire",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 4,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Ardor Blossom Star",
+          "sin_cost": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 4
+          },
+          "level": "He"
+        },
+        {
+          "name": "Capote",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 2
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {
@@ -1164,6 +1275,78 @@
             "sloth": 0,
             "wrath": 1
           }
+        },
+        {
+          "name": "Kurokumo Clan Wakashu",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 3,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "LCCB Assistant Manager",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "N Corp. Mittelhammer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 1
+          }
+        },
+        {
+          "name": "Rosespanner Workshop Rep",
+          "supported_sins": {
+            "envy": 1,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 3,
+            "sloth": 0,
+            "wrath": 0
+          }
+        },
+        {
+          "name": "Zwei Association South Section 5",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 3
+          }
+        },
+        {
+          "name": "Dieci Association South Section 4",
+          "supported_sins": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 3,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 1,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
@@ -1179,6 +1362,32 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "4th Match Flame",
+          "sin_cost": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 3
+          },
+          "level": "He"
+        },
+        {
+          "name": "Rime Shank",
+          "sin_cost": {
+            "envy": 3,
+            "gloom": 5,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {

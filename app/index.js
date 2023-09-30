@@ -2,15 +2,15 @@ import './styles.css';
 import { Team } from 'limbus-company-team-builder';
 import * as rawData from './data.json';
 
-let storedData = localStorage.getItem(
-  'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26'
-);
+// let storedData = localStorage.getItem(
+//   'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26'
+// );
 let team;
-if (storedData) {
-  team = Team.load(storedData);
-} else {
-  team = Team.load(JSON.stringify(rawData));
-}
+// if (storedData) {
+//   team = Team.load(storedData);
+// } else {
+team = Team.load(JSON.stringify(rawData));
+// }
 const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
 const initialData = JSON.parse(team.as_json_string());
 
