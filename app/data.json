@@ -396,6 +396,45 @@
             "wrath": 0
           },
           "level": "Zayin"
+        },
+        {
+          "name": "Fluid Sac",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 4,
+            "gluttony": 0,
+            "lust": 1,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "He"
+        },
+        {
+          "name": "Telepole",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 1
+          },
+          "level": "He"
+        },
+        {
+          "name": "Lifetime Stew",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 5,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {
@@ -502,6 +541,58 @@
             "pride": 0,
             "sloth": 0,
             "wrath": 2
+          },
+          "level": "Zayin"
+        },
+        {
+          "name": "4th Match Flame",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 4
+          },
+          "level": "He"
+        },
+        {
+          "name": "Red Eyes",
+          "sin_cost": {
+            "envy": 1,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 0
+          },
+          "level": "Teth"
+        },
+        {
+          "name": "Red Eyes (Open)",
+          "sin_cost": {
+            "envy": 3,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 0,
+            "wrath": 2
+          },
+          "level": "He"
+        },
+        {
+          "name": "Soda",
+          "sin_cost": {
+            "envy": 2,
+            "gloom": 0,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 0
           },
           "level": "Zayin"
         }
