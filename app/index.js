@@ -2,7 +2,15 @@ import './styles.css';
 import { Team } from 'limbus-company-team-builder';
 import * as rawData from './data.json';
 
-let team = Team.load(JSON.stringify(rawData));
+let storedData = localStorage.getItem(
+  'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26'
+);
+let team;
+if (storedData) {
+  team = Team.load(storedData);
+} else {
+  team = Team.load(JSON.stringify(rawData));
+}
 const egoLevels = ['Zayin', 'Teth', 'He', 'Waw', 'Aleph'];
 const initialData = JSON.parse(team.as_json_string());
 
@@ -144,10 +152,16 @@ function initialRender() {
 }
 
 function updateCalculatedElements() {
+  const updatedLocalStoredData = team.as_json_string();
+  localStorage.setItem(
+    'limbus-company-sin-calculator-e2896bbf50e0ad7507c11f4664baa14d0c9868104c0d109ddb1a59292d3221b19f2f7677b26',
+    updatedLocalStoredData
+  );
   const sinsContainer = document.getElementById('sins-container');
   const supportedSins = JSON.parse(team.sum_supported_sins());
   const requiredSins = JSON.parse(team.sum_required_sins());
-  const updatedData = JSON.parse(team.as_json_string());
+
+  const updatedData = JSON.parse(updatedLocalStoredData);
   for (let sin in supportedSins) {
     sinsContainer.querySelector(`span.${sin}-sin-counter`).innerHTML = `${supportedSins[sin]}/${requiredSins[sin]}`;
   }
