@@ -6,7 +6,7 @@ module.exports = merge(base, {
   mode: 'production',
   plugins: [
     new HtmlWebpackPlugin({
-      publicPath: 'limbus-company-team-builder',
+      publicPath: '',
       scriptLoading: 'defer',
       template: './app/index.html',
     }),
