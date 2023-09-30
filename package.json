@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "web app with Rust wasm",
   "scripts": {
-    "build": "webpack --config webpack.prod.config.js",
+    "build": "webpack",
     "start": "webpack-dev-server",
     "build:wasm": "wasm-pack build",
     "test": "wasm-pack test --node"
@@ -22,8 +22,7 @@
     "tailwindcss": "^3.3.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "webpack-merge": "^5.9.0"
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "limbus-company-team-builder": "file:pkg"
