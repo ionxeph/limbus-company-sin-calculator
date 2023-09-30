@@ -842,8 +842,8 @@
             "envy": 0,
             "gloom": 0,
             "gluttony": 2,
-            "lust": 3,
-            "pride": 0,
+            "lust": 0,
+            "pride": 3,
             "sloth": 1,
             "wrath": 0
           }
