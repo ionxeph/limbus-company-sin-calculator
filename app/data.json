@@ -1059,6 +1059,19 @@
             "wrath": 0
           },
           "level": "Teth"
+        },
+        {
+          "name": "Ya Śūnyatā Tad Rūpam",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 2,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 0,
+            "sloth": 2,
+            "wrath": 2
+          },
+          "level": "He"
         }
       ],
       "selected_identity": {
