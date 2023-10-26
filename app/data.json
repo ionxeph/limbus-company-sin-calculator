@@ -234,7 +234,19 @@
             "sloth": 0,
             "wrath": 0
           }
-        }
+        },
+        {
+          "name": "Lobotomy E.G.O::Regret",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 3,
+            "wrath": 1
+          }
+        },
       ],
       "all_egos": [
         {
