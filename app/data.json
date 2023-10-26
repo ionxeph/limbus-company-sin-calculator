@@ -246,7 +246,7 @@
             "sloth": 3,
             "wrath": 1
           }
-        },
+        }
       ],
       "all_egos": [
         {
@@ -766,6 +766,19 @@
             "wrath": 2
           },
           "level": "He"
+        },
+        {
+          "name": "Regret",
+          "sin_cost": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 0,
+            "pride": 2,
+            "sloth": 0,
+            "wrath": 3
+          },
+          "level": "Teth"
         }
       ],
       "selected_identity": {
@@ -870,6 +883,18 @@
             "pride": 3,
             "sloth": 0,
             "wrath": 2
+          }
+        },
+        {
+          "name": "Hook Office Fixer",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 0,
+            "gluttony": 0,
+            "lust": 2,
+            "pride": 1,
+            "sloth": 0,
+            "wrath": 3
           }
         }
       ],
