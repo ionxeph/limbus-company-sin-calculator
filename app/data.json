@@ -62,6 +62,18 @@
             "sloth": 2,
             "wrath": 1
           }
+        },
+        {
+          "name": "W Corp. L3 Cleanup Agent",
+          "supported_sins": {
+            "envy": 0,
+            "gloom": 1,
+            "gluttony": 2,
+            "lust": 0,
+            "pride": 0,
+            "sloth": 3,
+            "wrath": 0
+          }
         }
       ],
       "all_egos": [
